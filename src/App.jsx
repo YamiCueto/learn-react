@@ -23,20 +23,33 @@ import UseMemo from './pages/lessons/UseMemo';
 import CustomHooks from './pages/lessons/CustomHooks';
 import ReactRouter from './pages/lessons/ReactRouter';
 
+import UseReducer from './pages/lessons/UseReducer';
+import ErrorBoundaries from './pages/lessons/ErrorBoundaries';
+import SuspenseLazy from './pages/lessons/SuspenseLazy';
+import Portals from './pages/lessons/Portals';
+import Testing from './pages/lessons/Testing';
+import ServerComponents from './pages/lessons/ServerComponents';
+
 import Game from './pages/Game';
 
 import './App.css';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
+  const toggleCollapse = () => setSidebarCollapsed(prev => !prev);
 
   return (
     <>
       <Navbar onMenuToggle={toggleSidebar} />
-      <div className="app-layout">
-        <Sidebar isOpen={sidebarOpen} />
+      <div className={`app-layout ${sidebarCollapsed ? 'sidebar-is-collapsed' : ''}`}>
+        <Sidebar
+          isOpen={sidebarOpen}
+          isCollapsed={sidebarCollapsed}
+          onToggleCollapse={toggleCollapse}
+        />
         {/* Overlay for mobile */}
         {sidebarOpen && (
           <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)} />
@@ -67,6 +80,14 @@ function App() {
             <Route path="/lessons/use-memo" element={<UseMemo />} />
             <Route path="/lessons/custom-hooks" element={<CustomHooks />} />
             <Route path="/lessons/react-router" element={<ReactRouter />} />
+
+            {/* ── Advanced ── */}
+            <Route path="/lessons/use-reducer" element={<UseReducer />} />
+            <Route path="/lessons/error-boundaries" element={<ErrorBoundaries />} />
+            <Route path="/lessons/suspense-lazy" element={<SuspenseLazy />} />
+            <Route path="/lessons/portals" element={<Portals />} />
+            <Route path="/lessons/testing" element={<Testing />} />
+            <Route path="/lessons/server-components" element={<ServerComponents />} />
           </Routes>
         </main>
       </div>

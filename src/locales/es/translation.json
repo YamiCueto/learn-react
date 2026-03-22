@@ -14,7 +14,8 @@
   "levels": {
     "beginner": "Coquito 🐣",
     "basic": "Básico 🌱",
-    "intermediate": "Intermedio 🔥"
+    "intermediate": "Intermedio 🔥",
+    "advanced": "Avanzado ⚡"
   },
   "progress": {
     "completed": "completado",
@@ -108,6 +109,30 @@
     "reactRouter": {
       "title": "React Router",
       "description": "Navegación y rutas en aplicaciones SPA"
+    },
+    "useReducer": {
+      "title": "useReducer",
+      "description": "Maneja estado complejo con acciones y reducers"
+    },
+    "errorBoundaries": {
+      "title": "Error Boundaries",
+      "description": "Captura errores de renderizado y muestra UIs de respaldo"
+    },
+    "suspenseLazy": {
+      "title": "Suspense & lazy",
+      "description": "Carga componentes bajo demanda para mejorar el rendimiento"
+    },
+    "portals": {
+      "title": "Portals",
+      "description": "Renderiza componentes fuera del árbol del DOM principal"
+    },
+    "testing": {
+      "title": "Testing",
+      "description": "Prueba tus componentes con React Testing Library"
+    },
+    "serverComponents": {
+      "title": "Server Components",
+      "description": "Componentes que se ejecutan en el servidor con React 19"
     }
   }
 }

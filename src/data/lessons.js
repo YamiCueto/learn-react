@@ -108,6 +108,49 @@ export const LESSONS = [
     path: '/lessons/react-router',
     order: 15,
   },
+  // ── Avanzado ⚡ ──────────────────────────────────
+  {
+    id: 'use-reducer',
+    i18nKey: 'useReducer',
+    level: 'advanced',
+    path: '/lessons/use-reducer',
+    order: 16,
+  },
+  {
+    id: 'error-boundaries',
+    i18nKey: 'errorBoundaries',
+    level: 'advanced',
+    path: '/lessons/error-boundaries',
+    order: 17,
+  },
+  {
+    id: 'suspense-lazy',
+    i18nKey: 'suspenseLazy',
+    level: 'advanced',
+    path: '/lessons/suspense-lazy',
+    order: 18,
+  },
+  {
+    id: 'portals',
+    i18nKey: 'portals',
+    level: 'advanced',
+    path: '/lessons/portals',
+    order: 19,
+  },
+  {
+    id: 'testing',
+    i18nKey: 'testing',
+    level: 'advanced',
+    path: '/lessons/testing',
+    order: 20,
+  },
+  {
+    id: 'server-components',
+    i18nKey: 'serverComponents',
+    level: 'advanced',
+    path: '/lessons/server-components',
+    order: 21,
+  },
 ];
 
 export const LESSON_IDS = LESSONS.map(l => l.id);
@@ -116,6 +159,7 @@ export const LEVELS = {
   beginner:     { color: '#f59e0b', badge: 'badge-beginner' },
   basic:        { color: '#10b981', badge: 'badge-basic' },
   intermediate: { color: '#7c3aed', badge: 'badge-intermediate' },
+  advanced:     { color: '#dc2626', badge: 'badge-advanced' },
 };
 
 export function getLessonById(id) {

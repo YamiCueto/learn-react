@@ -1,3 +1,4 @@
+/* ── Sidebar shell ─────────────────────────────────────── */
 .sidebar {
   position: fixed;
   top: var(--navbar-height);
@@ -13,10 +14,52 @@
   gap: var(--space-4);
   padding: var(--space-4);
   z-index: 100;
-  transition: transform var(--transition-base);
+  transition: width var(--transition-base), transform var(--transition-base);
 }
 
-/* Progress section */
+/* ── Collapsed (desktop) ───────────────────────────────── */
+.sidebar.collapsed {
+  width: 48px;
+  padding: var(--space-4) var(--space-2);
+}
+
+.sidebar.collapsed .sidebar-progress,
+.sidebar.collapsed .sidebar-nav {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* ── Collapse toggle button ────────────────────────────── */
+.sidebar-collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-hover);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-self: flex-end;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  line-height: 1;
+}
+
+.sidebar.collapsed .sidebar-collapse-btn {
+  align-self: center;
+}
+
+.sidebar-collapse-btn:hover {
+  background: var(--color-primary-dim);
+  color: var(--color-primary-light);
+  border-color: rgba(124,58,237,0.4);
+}
+
+/* ── Progress section ──────────────────────────────────── */
 .sidebar-progress {
   padding: var(--space-4);
   background: var(--color-primary-dim);
@@ -25,6 +68,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  transition: opacity var(--transition-base), visibility var(--transition-base);
 }
 
 .sidebar-progress-label {
@@ -39,28 +83,85 @@
   font-weight: 700;
 }
 
-/* Nav */
+/* ── Nav ───────────────────────────────────────────────── */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-3);
+  transition: opacity var(--transition-base), visibility var(--transition-base);
 }
 
+/* ── Group ─────────────────────────────────────────────── */
 .sidebar-group {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
 }
 
-.sidebar-group-label {
-  margin-bottom: var(--space-2);
+/* Clickable group header (replaces old static .sidebar-group-label) */
+.sidebar-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px var(--space-3);
+  cursor: pointer;
   font-size: 0.73rem;
+  letter-spacing: 0.03em;
+  transition: filter var(--transition-fast);
 }
 
+.sidebar-group-header:hover {
+  filter: brightness(1.2);
+}
+
+.sidebar-group-label-text {
+  flex: 1;
+  text-align: left;
+}
+
+.sidebar-group-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sidebar-group-count {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+.sidebar-group-chevron {
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform var(--transition-base);
+}
+
+.sidebar-group-chevron.open {
+  transform: rotate(270deg);
+}
+
+/* ── Animated list wrapper (grid trick) ────────────────── */
+.sidebar-list-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-base);
+  overflow: hidden;
+}
+
+.sidebar-list-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+/* ── List & items ──────────────────────────────────────── */
 .sidebar-list {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding-top: var(--space-1);
 }
 
 .sidebar-item {
@@ -102,13 +203,19 @@
   text-overflow: ellipsis;
 }
 
+/* ── Mobile ────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
     box-shadow: var(--shadow-lg);
     z-index: 200;
+    width: var(--sidebar-width) !important; /* always full width on mobile */
   }
   .sidebar.open {
     transform: translateX(0);
   }
+  .sidebar-collapse-btn {
+    display: none; /* hide desktop toggle on mobile */
+  }
 }
+
