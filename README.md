@@ -1,16 +1,110 @@
-# React + Vite
+# ⚛️ LearnReact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Sitio web interactivo y bilingüe (ES/EN) para aprender React desde cero hasta nivel intermedio.
+> An interactive, bilingual (ES/EN) website to learn React from scratch to intermediate level.
 
-Currently, two official plugins are available:
+🌐 **Live site:** [yamicueto.github.io/learn-react](https://yamicueto.github.io/learn-react)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌐 **Bilingüe / Bilingual** — Full content in Spanish 🇲🇽 and English 🇺🇸
+- 📚 **15 lessons** structured in 3 levels: Beginner → Basic → Intermediate
+- 💻 **Code examples** with syntax highlighting and copy-to-clipboard
+- 📈 **Progress tracking** saved locally (no account needed)
+- 🎯 **Challenges** at the end of every lesson
+- 🌑 **Dark mode** design with a modern, premium look
+- 📱 **Responsive** — works on mobile and desktop
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🗺️ Roadmap
+
+| Level | Lessons |
+|-------|---------|
+| 🐣 **Beginner** (Coquito) | What is React?, JSX, Components, Props, useState |
+| 🌱 **Basic** | useEffect, Events, Lists & Keys, Conditional Rendering, Forms |
+| 🔥 **Intermediate** | useContext, useRef, useMemo & useCallback, Custom Hooks, React Router |
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| [Vite](https://vitejs.dev/) + [React 19](https://react.dev/) | Core framework |
+| [React Router DOM v7](https://reactrouter.com/) | Client-side routing |
+| [i18next](https://www.i18next.com/) + react-i18next | Bilingual support |
+| [gh-pages](https://github.com/tschaub/gh-pages) | GitHub Pages deployment |
+| Vanilla CSS | Styling (no frameworks) |
+
+---
+
+## 🚀 Run locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📦 Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+This runs `npm run build` automatically and pushes `/dist` to the `gh-pages` branch.
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Navbar, Sidebar, CodeBlock, LessonLayout
+├── data/             # lessons.js — single source of truth for all 15 lessons
+├── hooks/            # useProgress — localStorage progress tracking
+├── locales/
+│   ├── es/           # Spanish translations
+│   └── en/           # English translations
+├── pages/
+│   ├── Home.jsx
+│   ├── Roadmap.jsx
+│   └── lessons/      # One file per lesson
+├── i18n.js
+├── App.jsx           # Router
+└── index.css         # Design system & global styles
+```
+
+---
+
+## 🤝 Contributing
+
+This project is open to contributions! If you'd like to add a lesson, fix a typo, or improve translations:
+
+1. Fork the repository
+2. Create a branch: `git checkout -b feat/lesson-name`
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 👤 Author
+
+**Yamid Cueto** — Senior Full Stack Developer
+
+- GitHub: [@YamiCueto](https://github.com/YamiCueto)
+
+---
+
+## 📄 License
+
+MIT — free to use, share and modify.
