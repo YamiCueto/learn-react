@@ -151,7 +151,7 @@ kbd {
 
 /* ── Tip Overlay & Modal ─────────────────────────── */
 .tip-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(10, 10, 20, 0.82);
   -webkit-backdrop-filter: blur(4px);
@@ -159,18 +159,21 @@ kbd {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: 200;
   animation: fadeIn 0.2s ease;
+  padding: var(--space-4);
 }
 
 .tip-modal {
   background: var(--color-bg-card);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  padding: var(--space-6);
   max-width: 440px;
-  width: 90%;
-  min-height: 360px;
+  width: 100%;
+  min-height: 320px;
+  max-height: 90vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
