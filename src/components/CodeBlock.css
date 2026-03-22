@@ -1,0 +1,35 @@
+.code-wrapper {
+  background: #0d1117;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: var(--space-6) 0;
+  font-family: var(--font-mono);
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-5);
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.code-body {
+  padding: var(--space-5);
+  overflow-x: auto;
+}
+
+.code-body pre {
+  margin: 0;
+}
+
+.code-body code {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #e6edf3;
+  display: block;
+  white-space: pre;
+}

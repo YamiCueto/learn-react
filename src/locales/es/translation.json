@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "roadmap": "Roadmap",
+    "lessons": "Lecciones"
+  },
+  "hero": {
+    "title": "Aprende React",
+    "subtitle": "Desde cero hasta intermedio, paso a paso",
+    "cta": "Comenzar ahora",
+    "ctaRoadmap": "Ver Roadmap"
+  },
+  "levels": {
+    "beginner": "Coquito 🐣",
+    "basic": "Básico 🌱",
+    "intermediate": "Intermedio 🔥"
+  },
+  "progress": {
+    "completed": "completado",
+    "lessons": "lecciones",
+    "of": "de"
+  },
+  "lesson": {
+    "next": "Siguiente →",
+    "prev": "← Anterior",
+    "markDone": "Marcar como completada ✅",
+    "done": "¡Completada! ✅",
+    "challenge": "🎯 Reto",
+    "example": "Ejemplo"
+  },
+  "home": {
+    "welcome": "Bienvenido a LearnReact",
+    "description": "Un camino interactivo y bilingüe para dominar React desde los fundamentos hasta un nivel intermedio sólido.",
+    "startJourney": "Comenzar el journey",
+    "features": {
+      "bilingual": "Bilingüe ES/EN",
+      "bilingualDesc": "Todo el contenido disponible en español e inglés",
+      "interactive": "Ejemplos interactivos",
+      "interactiveDesc": "Código real con syntax highlighting en cada lección",
+      "progress": "Seguimiento de progreso",
+      "progressDesc": "Guarda tu avance localmente, sin necesidad de cuenta",
+      "challenges": "Mini retos",
+      "challengesDesc": "Pon a prueba lo aprendido al final de cada lección"
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap de aprendizaje",
+    "description": "Sigue este camino estructurado para dominar React"
+  },
+  "lessons": {
+    "whatIsReact": {
+      "title": "¿Qué es React?",
+      "description": "Entiende qué es React, por qué existe y cómo funciona el DOM virtual"
+    },
+    "jsx": {
+      "title": "JSX",
+      "description": "La sintaxis especial de React que mezcla JavaScript y HTML"
+    },
+    "components": {
+      "title": "Componentes",
+      "description": "El bloque fundamental de cualquier app en React"
+    },
+    "props": {
+      "title": "Props",
+      "description": "Cómo pasar información entre componentes"
+    },
+    "useState": {
+      "title": "useState",
+      "description": "Maneja el estado local de tus componentes"
+    },
+    "useEffect": {
+      "title": "useEffect",
+      "description": "Sincroniza tu componente con el mundo exterior"
+    },
+    "events": {
+      "title": "Eventos",
+      "description": "Maneja la interacción del usuario con tu app"
+    },
+    "lists": {
+      "title": "Listas y Keys",
+      "description": "Renderiza colecciones de datos eficientemente"
+    },
+    "conditional": {
+      "title": "Renderizado Condicional",
+      "description": "Muestra u oculta elementos según el estado"
+    },
+    "forms": {
+      "title": "Formularios",
+      "description": "Controla y valida la entrada del usuario"
+    },
+    "useContext": {
+      "title": "useContext",
+      "description": "Comparte estado global sin prop drilling"
+    },
+    "useRef": {
+      "title": "useRef",
+      "description": "Accede al DOM y persiste valores sin re-renders"
+    },
+    "useMemo": {
+      "title": "useMemo & useCallback",
+      "description": "Optimiza el rendimiento de tu aplicación"
+    },
+    "customHooks": {
+      "title": "Custom Hooks",
+      "description": "Extrae y reutiliza lógica entre componentes"
+    },
+    "reactRouter": {
+      "title": "React Router",
+      "description": "Navegación y rutas en aplicaciones SPA"
+    }
+  }
+}
