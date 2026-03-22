@@ -2,7 +2,8 @@
   "nav": {
     "home": "Inicio",
     "roadmap": "Roadmap",
-    "lessons": "Lecciones"
+    "lessons": "Lecciones",
+    "game": "Juego"
   },
   "hero": {
     "title": "Aprende React",

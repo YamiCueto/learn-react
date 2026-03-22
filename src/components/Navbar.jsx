@@ -41,6 +41,9 @@ export default function Navbar({ onMenuToggle }) {
           <NavLink to="/roadmap" className={({ isActive }) => isActive ? 'active' : ''}>
             {t('nav.roadmap')}
           </NavLink>
+          <NavLink to="/game" className={({ isActive }) => isActive ? 'active' : ''}>
+            🎮 {t('nav.game')}
+          </NavLink>
         </nav>
 
         {/* Right: language toggle */}

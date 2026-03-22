@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "roadmap": "Roadmap",
-    "lessons": "Lessons"
+    "lessons": "Lessons",
+    "game": "Game"
   },
   "hero": {
     "title": "Learn React",

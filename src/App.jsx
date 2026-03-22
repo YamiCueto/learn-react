@@ -13,6 +13,8 @@ import Components from './pages/lessons/Components';
 import Props from './pages/lessons/Props';
 import UseState from './pages/lessons/UseState';
 
+import Game from './pages/Game';
+
 // ComingSoon wrapper for remaining lessons
 import ComingSoon from './pages/lessons/ComingSoon';
 
@@ -36,6 +38,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/game" element={<Game />} />
 
             {/* ── Beginner ── */}
             <Route path="/lessons/what-is-react" element={<WhatIsReact />} />
